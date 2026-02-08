@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0e0e11;
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:48px;
+}
+
+.hero p{
+  font-size:20px;
+  opacity:.9;
+  margin:10px 0 25px;
+}
+
+.hero a{
+  padding:15px 35px;
+  background:#ff2d55;
+  color:#fff;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* SECCIONES */
+section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+section h2{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.subtitulo{
+  text-align:center;
+  opacity:.7;
+  margin-bottom:50px;
+}
+
+/* SERVICIOS */
+.servicios-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.servicio-card{
+  background:#16161d;
+  border-radius:22px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.servicio-card:hover{
+  transform:translateY(-6px);
+}
+
+.servicio-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.servicio-card h3{
+  margin:20px 0 10px;
+  text-align:center;
+}
+
+.servicio-card p{
+  font-size:14px;
+  opacity:.85;
+  padding:0 20px;
+  text-align:center;
+}
+
+.precio{
+  display:block;
+  text-align:center;
+  margin:15px 0 25px;
+  font-weight:600;
+  font-size:18px;
+  color:#ff2d55;
+}
+
+/* GALERIA */
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+
+.galeria img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:20px;
+  transition:.3s;
+}
+
+.galeria img:hover{
+  transform:scale(1.05);
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#ff2d55,#b721ff);
+  border-radius:30px;
+  padding:70px 20px;
+  text-align:center;
+}
+
+.cta h2{
+  margin-bottom:10px;
+}
+
+.cta p{
+  opacity:.9;
+}
+
+.cta a{
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 40px;
+  background:#25d366;
+  color:#fff;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 0 25px rgba(37,211,102,.6);
+}
+
+/* BOTONES FLOTANTES */
+.whatsapp,
+.instagram{
+  position:fixed;
+  right:20px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  color:#fff;
+  z-index:999;
+}
+
+.whatsapp{
+  bottom:20px;
+  background:#25d366;
+}
+
+.instagram{
+  bottom:90px;
+  background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Beauty Studio</h1>
+    <p>Uñas · Pestañas · Maquillaje · Trenzas</p>
+    <a href="#servicios">Ver Servicios</a>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <h2>Nuestros Servicios</h2>
+  <p class="subtitulo">Conocé todo lo que ofrecemos</p>
+
+  <div class="servicios-grid">
+
+    <div class="servicio-card">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80">
+      <h3>Uñas</h3>
+      <p>Semipermanente, esculpidas y diseños personalizados.</p>
+      <span class="precio">$8.000</span>
+    </div>
+
+    <div class="servicio-card">
+      <img src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?auto=format&fit=crop&w=800&q=80">
+      <h3>Pestañas</h3>
+      <p>Lifting, volumen y extensiones profesionales.</p>
+      <span class="precio">$10.000</span>
+    </div>
+
+    <div class="servicio-card">
+      <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=800&q=80">
+      <h3>Maquillaje</h3>
+      <p>Maquillaje social y para eventos.</p>
+      <span class="precio">$12.000</span>
+    </div>
+
+    <div class="servicio-card">
+      <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?auto=format&fit=crop&w=800&q=80">
+      <h3>Trenzas</h3>
+      <p>Trenzas clásicas, modernas y estilos únicos.</p>
+      <span class="precio">$9.000</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section>
+  <h2>Trabajos</h2>
+  <p class="subtitulo">Algunos de nuestros trabajos</p>
+
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?auto=format&fit=crop&w=800&q=80">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>¿Querés un turno?</h2>
+  <p>Consultanos por WhatsApp</p>
+
+  <a href="https://wa.me/549XXXXXXXXXX" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> Contactar
+  </a>
+</section>
+
+<footer>
+  © 2026 Beauty Studio · Todos los derechos reservados
+</footer>
+
+<!-- BOTONES FLOTANTES -->
+<a class="whatsapp" href="https://wa.me/549XXXXXXXXXX" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a class="instagram" href="https://instagram.com/TUINSTAGRAM" target="_blank">
+  <i class="fa-brands fa-instagram"></i>
+</a>
+
+</body>
+</html>
